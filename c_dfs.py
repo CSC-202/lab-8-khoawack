@@ -27,7 +27,7 @@ search_space: list = [start]
 # step 3 while the search space is empty...
 while len(search_space) > 0:
     # remove a node from the search space (FIFO)
-    current: Node = search_space.pop( None ) # TODO
+    current: Node = search_space.pop(len(search_space)-1) # TODO
 
     # if a None child is not being processed...
     if current != None:
@@ -35,6 +35,10 @@ while len(search_space) > 0:
         print(current.value)
 
         # add the left and right to the search space (FILO)
-        search_space = None # TODO
+        if current.right is not None:
+            search_space.append(current.right)
+        if current.left is not None:
+            search_space.append(current.left)
+
     # end if
 # end loop

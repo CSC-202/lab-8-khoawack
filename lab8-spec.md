@@ -32,5 +32,4 @@ Hint: `0, -2, -10, -5, 1, 10, 5`
 
 
 ## Submission
-
 Push your work to GitHub (3 points), and have your code checked off in lab.
